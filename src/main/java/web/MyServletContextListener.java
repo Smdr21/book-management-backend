@@ -1,11 +1,11 @@
 package web;
 
-import jakarta.servlet.ServletContextEvent;
-import jakarta.servlet.ServletContextListener;
-import jakarta.servlet.annotation.WebListener;
 import controller.MyDataSouce;
 import org.postgresql.ds.PGConnectionPoolDataSource;
 
+import javax.servlet.ServletContextEvent;
+import javax.servlet.ServletContextListener;
+import javax.servlet.annotation.WebListener;
 import java.sql.SQLException;
 @WebListener
 public class MyServletContextListener implements ServletContextListener {

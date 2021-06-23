@@ -1,7 +1,8 @@
 package model;
 
-import jakarta.servlet.ServletContext;
 import org.postgresql.ds.PGConnectionPoolDataSource;
+
+import javax.servlet.ServletContext;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -67,7 +68,7 @@ public class DataAccess {
         return true;
     }
 
-    public static boolean deleteBook(ServletContext sc,int id){
+    public static boolean deleteBook(ServletContext sc, int id){
         var datasource = (PGConnectionPoolDataSource)sc.getAttribute("datasource");
 
         try(Connection myconn = datasource.getConnection()){
